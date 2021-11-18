@@ -41,7 +41,7 @@ io.on('connection', (socket) => {
 
     socket.on("send-chat-message", data => {
         console.log(data);
-        socket.broadcast.emit("recieve-chat-message", data)
+        io.emit("recieve-chat-message", data)
     })
 });
 
